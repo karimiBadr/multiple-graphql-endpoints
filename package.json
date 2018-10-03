@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "workspaces": [
+    "api",
+    "client",
+    "main-server",
+    "sub-server"
+  ],
+  "scripts": {
+    "start-api": "cd api && yarn start",
+    "start-main-server": "cd main-server && yarn start",
+    "start-sub-server": "cd sub-server && yarn start",
+    "start-client": "cd client && yarn start"
+  }
+}
