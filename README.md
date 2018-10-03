@@ -9,36 +9,33 @@ Simple voting app showcasing GraphQL queries, mutations and subscriptions on mul
 - **sub-server** - GraphQL endpoint handling mutations and subscriptions
 - **client** - Apollo/React app that executes queries on the main-server as well as mutations & subscriptions on the sub-server
 
-## Setup
-
-Install and run the servers as follows:
-
-#### api
+## Installation
 
 ```bash
-yarn
-node index.js
+cd multiple-graphql-endpoints
+yarn start
+```
+
+# Run
+
+From the project root:
+
+#### api
+```bash
+yarn start-api
 ```
 
 #### main-server
-
 ```bash
-yarn
-node index.js
+yarn start-main-server
 ```
 
 #### sub-server
-
 ```bash
-yarn
-node index.js
+yarn start-sub-server
 ```
 
-Now install and run the React client
-
 #### client
-
 ```bash
-yarn
-yarn start
+yarn start-client
 ```
