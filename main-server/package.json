@@ -1,5 +1,5 @@
 {
-  "name": "gql-example",
+  "name": "main-server",
   "version": "1.0.0",
   "description": "test graphql server",
   "main": "index.js",
@@ -10,8 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "apollo-server": "^2.1.0",
+    "cross-env": "5.0.5",
     "graphql": "^14.0.2",
-    "graphql-subscriptions": "^1.0.0",
     "node-fetch": "^2.2.0"
   }
 }

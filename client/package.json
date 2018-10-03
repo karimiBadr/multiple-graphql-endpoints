@@ -1,5 +1,5 @@
 {
-  "name": "comments-demo",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "apollo-link-http": "^1.5.5",
     "apollo-link-ws": "^1.0.9",
     "apollo-utilities": "^1.0.21",
+    "cross-env": "5.0.5",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.9.2",
     "react": "^16.5.2",
