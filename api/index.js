@@ -1,5 +1,6 @@
 const bodyParser = require('body-parser');
 const server = require('./server');
+const { API_PORT } = require('../_shared/ports');
 
 // Parse incoming requests data
 server.use(bodyParser.json());
@@ -8,8 +9,6 @@ server.use(bodyParser.urlencoded({ extended: false }));
 const getAllAnimals = require('./endpoints/getAllAnimals');
 const updateAnimal = require('./endpoints/updateAnimal');
 
-const PORT = 5000;
-
-server.listen(PORT, () => {
-  console.log(`Rest API server running on port ${PORT}`);
+server.listen(API_PORT, () => {
+  console.log(`API server running on port ${API_PORT}`);
 });

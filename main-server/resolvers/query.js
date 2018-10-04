@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
-const ALL_ANIMALS_URL = `http://localhost:5000/api/v1/animals`;
+const { API_PORT } = require('../../_shared/ports');
+
+const ALL_ANIMALS_URL = `http://localhost:${API_PORT}/api/v1/animals`;
 
 const resolvers = {
   Query: {

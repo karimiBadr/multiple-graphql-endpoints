@@ -1,0 +1,9 @@
+const API_PORT = 3001;
+const MAIN_SERVER_PORT = 3002;
+const SUB_SERVER_PORT = 3003;
+
+module.exports = {
+  API_PORT,
+  MAIN_SERVER_PORT,
+  SUB_SERVER_PORT,
+};
