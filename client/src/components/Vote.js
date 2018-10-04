@@ -5,35 +5,34 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
-  border: solid 1px black;
   background: ${({ color }) => color};
+  box-shadow: 0 0.1rem 0.75rem 0 hsl(216, 29%, 0%, 0.3);
+  border-radius: 0.15rem;
+  overflow: hidden;
 `;
 
 const Button = styled.button`
-  background: hsl(0, 0%, 80%);
-  border-style: solid;
-  border-color: black;
+  background: none;
+  text-shadow: .1rem .1rem .1rem hsla(0, 0%, 0%, .3);
+  padding: 0.5rem;
   font-weight: bold;
-  margin: 0;
-  padding: 5px 10px 5px 10px;
-  &:first-of-type {
-    border-width: 0 1px 0 0;
-  }
-  &:last-of-type {
-    border-width: 0 0 0 1px;
-  }
+  border: none;
+  color: white;
   cursor: pointer;
   &:hover {
-    background: hsl(0, 0%, 95%)
+    background: hsla(0, 0%, 95%, 0.5);
   }
 `;
 
 const Label = styled.label`
-  padding: 0 1rem 0 1rem;
+  font-weight: bold;
+  text-shadow: .1rem .1rem .1rem hsla(0, 0%, 0%, .3);
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 0.75rem;
+  color: white;
 `;
 
 const VOTE = gql`

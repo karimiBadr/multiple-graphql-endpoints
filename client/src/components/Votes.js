@@ -1,17 +1,32 @@
 import React, { Component } from 'react';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
-import Median from './Charts/Median';
-import Chart from './Charts/Chart';
+import ValueBarChart from './ValueBarChart';
+import BarChart from './BarChart';
 import Vote from './Vote';
 import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  > * + * {
+    margin-top: 1rem;
+  }
+`;
+
+const Heading = styled.h1`
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+`;
 
 const VoteOptions = styled.div`
   display: flex;
   flex-direction: row;
-  height: 2rem;
   > * + * {
-    margin-left: 1rem;
+    margin-left: 0.5rem;
   }
 `;
 
@@ -53,17 +68,17 @@ class VotesPage extends Component {
       .map((animal) => animal.upvotes + animal.downvotes)
       .reduce((a, b) => a + b);
     return (
-      <div>
-        <h2>Votes: {votes}</h2>
+      <Wrapper>
+        <Heading>Votes: {votes}</Heading>
         <VoteOptions>
           {animals.map((animal, index) => (
             <Vote key={index} animal={animal} />
           ))}
         </VoteOptions>
-        <Chart title="Upvotes" animals={animals} keyVal="upvotes" />
-        <Chart title="Downvotes" animals={animals} keyVal="downvotes" />
-        <Median animals={animals} />
-      </div>
+        <BarChart title="Upvotes" animals={animals} keyVal="upvotes" />
+        <BarChart title="Downvotes" animals={animals} keyVal="downvotes" />
+        <ValueBarChart animals={animals} />
+      </Wrapper>
     );
   }
 }
@@ -86,6 +101,7 @@ const VotesPageWithData = () => {
                   (animal) => animal.id === id,
                 );
 
+                // forgive me father for I have sinned...
                 const test = JSON.stringify(animals);
                 const parsedTest = JSON.parse(test);
 
