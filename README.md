@@ -19,7 +19,7 @@ cd multiple-graphql-endpoints
 yarn
 ```
 
-# Run
+## Run
 
 From the project root:
 
