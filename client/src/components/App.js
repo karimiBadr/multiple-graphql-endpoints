@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ApolloProvider } from 'react-apollo';
-import { apolloClient } from './ApolloClient';
+import { apolloClient } from '../ApolloClient';
 import styled from 'styled-components';
 import VotesPageWithData from './Votes';
+import globals from '../styles/globals';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,6 +14,7 @@ const Wrapper = styled.div`
 
 class App extends Component {
   render() {
+    globals();
     return (
       <ApolloProvider client={apolloClient}>
         <Wrapper>
