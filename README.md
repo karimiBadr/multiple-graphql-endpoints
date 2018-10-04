@@ -2,6 +2,9 @@
 
 Simple voting app showcasing GraphQL queries, mutations and subscriptions on multiple GraphQL endpoints.
 
+Inline-style: 
+![alt text](./screen-grab.png "Logo Title Text 1")
+
 ## Directories
 
 - **api** - express server acting as database containing animal voting data
