@@ -6,8 +6,6 @@ const ALL_ANIMALS_URL = `http://localhost:${API_PORT}/api/v1/animals/`;
 const Mutation = {
   Mutation: {
     vote: async (obj, args, context, info) => {
-      console.log("Mutation: 'vote'");
-      console.log({ args });
       const { animal_id, vote } = args;
       const url = ALL_ANIMALS_URL + animal_id;
       await postData(url, { vote: vote })
