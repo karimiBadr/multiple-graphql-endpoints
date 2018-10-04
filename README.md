@@ -2,8 +2,7 @@
 
 Simple voting app showcasing GraphQL queries, mutations and subscriptions on multiple GraphQL endpoints.
 
-Inline-style: 
-![alt text](./screen-grab.png "Logo Title Text 1")
+![alt text](./screen-grab.png "client screen shot")
 
 ## Directories
 
@@ -15,8 +14,9 @@ Inline-style:
 ## Installation
 
 ```bash
+git clone https://github.com/plexey/multiple-graphql-endpoints.git
 cd multiple-graphql-endpoints
-yarn start
+yarn
 ```
 
 # Run
